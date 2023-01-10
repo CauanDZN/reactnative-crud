@@ -1,29 +1,35 @@
-import React from "react";
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import UserList from "./views/UserList";
-import UserForm from "./views/UserForm";
-import { Button, Icon } from "@rneui/base";
+import UserList from './views/UserList'
+import UserForm from './views/UserForm'
+import { Button, Icon } from 'react-native-elements'
 
 const Stack = createNativeStackNavigator()
 
 export default props => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="UserList" screenOptions={screenOptions}>
-                <Stack.Screen 
+            <Stack.Navigator
+                initialRouteName="UserList"
+                screenOptions={screenOptions}>
+                <Stack.Screen
                     name="UserList"
                     component={UserList}
-                    options={({navigation}) => {
+                    options={({ navigation }) => {
                         return {
-                            title: "Lista de usuários",
+                            title: "Lista de Usuários",
                             headerRight: () => (
-                                <Button onPress={() => navigation.navigate("UserForm")} type="clear" icon={<Icon name="add" size={25} color="white" />} />
+                                <Button
+                                    onPress={() => navigation.navigate("UserForm")}
+                                    type="clear"
+                                    icon={<Icon name="add" />}
+                                />
                             )
                         }
                     }}
                 />
-                <Stack.Screen 
+                <Stack.Screen
                     name="UserForm"
                     component={UserForm}
                     options={{
@@ -37,10 +43,10 @@ export default props => {
 
 const screenOptions = {
     headerStyle: {
-        backgroundColor: "#f4511e"
+        backgroundColor: '#f4511e'
     },
-    headerTintColor: "#fff",
+    headerTintColor: '#fff',
     headerTitleStyle: {
-        fontWeight: "bold"
+        fontWeight: 'bold'
     }
 }
