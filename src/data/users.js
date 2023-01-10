@@ -27,4 +27,11 @@ export default [
       avatarUrl:
         'https://cdn.pixabay.com/photo/2016/03/31/21/04/horse-1296173_960_720.png',
     },
+    {
+        id: 5,
+        name: 'Igor Miguel',
+        email: 'igor@empmail.com',
+        avatarUrl:
+          'https://cdn.pixabay.com/photo/2017/11/13/15/09/biceps-2945912_960_720.jpg',
+      },
   ];
