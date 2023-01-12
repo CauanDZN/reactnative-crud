@@ -1,12 +1,13 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import UserList from './views/UserList'
 import UserForm from './views/UserForm'
 import { Button, Icon } from 'react-native-elements'
 import { UsersProvider } from './context/UsersContext'
 
-const Stack = createNativeStackNavigator()
+
+const Stack = createStackNavigator()
 
 export default props => {
     return (
@@ -25,7 +26,7 @@ export default props => {
                                     <Button
                                         onPress={() => navigation.navigate("UserForm")}
                                         type="clear"
-                                        icon={<Icon name="add" color="#fff" size={25} />}
+                                        icon={<Icon name="add" size={25} color="white" />}
                                     />
                                 )
                             }
